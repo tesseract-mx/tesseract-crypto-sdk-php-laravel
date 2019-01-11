@@ -3,9 +3,11 @@
     "description": "Tesseract Crypto SDK PHP Laravel from Tesseract Crypto API v2",
     "version": "0.2.1",
     "type": "library",
+    "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4",
-        "tesseract/crypto-sdk": "^0.2.1"
+        "php": ">=7.1.3",
+        "illuminate/support": "5.7.*",
+        "tesseract/crypto-sdk": "dev-develop"
     },
     "require-dev": {
         "phpunit/phpunit": "6.*"
@@ -28,5 +30,15 @@
             "Tesseract\\": "src/Tesseract"
         },
         "files": ["src/helpers.php"]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tesseract\\Illuminate\\Support\\ServiceProvider"
+            ],
+            "aliases": {
+                "CryptoSDK": "Tesseract\\Illuminate\\Support\\Facade"
+            }
+        }
     }
 }
