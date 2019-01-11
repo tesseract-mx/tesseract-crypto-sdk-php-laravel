@@ -29,7 +29,9 @@
         "psr-4": {
             "Tesseract\\": "src/Tesseract"
         },
-        "files": ["src/helpers.php"]
+        "files": [
+
+        ]
     },
     "extra": {
         "laravel": {
