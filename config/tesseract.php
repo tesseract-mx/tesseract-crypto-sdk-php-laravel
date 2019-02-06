@@ -39,7 +39,7 @@ return [
         |
         |
          */
-        'timeout' => env('TESSERACT_CRYPTO_API_TIMEOUT', 0),
+        'timeout' => env('TESSERACT_CRYPTO_API_TIMEOUT', 5.000),
 
         /*
         |--------------------------------------------------------------------------
