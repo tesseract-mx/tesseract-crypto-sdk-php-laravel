@@ -5,8 +5,8 @@
     "type": "library",
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.1.3",
-        "illuminate/support": "5.5.*",
+        "php": ">=7.0.0",
+        "illuminate/support": ">=5.0,<5.8",
         "tesseract/crypto-sdk": "dev-develop"
     },
     "require-dev": {
