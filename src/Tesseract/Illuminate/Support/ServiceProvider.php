@@ -1,8 +1,8 @@
 <?php namespace Tesseract\Illuminate\Support;
 
-use Tesseract\Crypto\SDK\ConfigBase;
 use Tesseract\Crypto\SDK\CryptoSDK;
-use Tesseract\Crypto\SDK\IConfig;
+use Tesseract\Crypto\SDK\Options\Config;
+use Tesseract\Crypto\SDK\Options\HttpClientConfig;
 
 /**
  * Class ServiceProvider
@@ -23,13 +23,13 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
         $this->app->singleton(CryptoSDK::class, function (){
 
-            $baseUrl = config(IConfig::BASE_URL);
-            $accessKeyId = config(IConfig::ACCESS_KEY_ID);
-            $secretAccessKey = config(IConfig::SECRET_ACCESS_KEY);
-            $debug = config(IConfig::DEBUG);
-            $timeout = config(IConfig::TIMEOUT);
+            $baseUrl = config(Config::BASE_URL);
+            $accessKeyId = config(Config::ACCESS_KEY_ID);
+            $secretAccessKey = config(Config::SECRET_ACCESS_KEY);
+            $debug = config(Config::DEBUG);
+            $timeout = config(Config::TIMEOUT);
 
-            $config = new ConfigBase($baseUrl, $accessKeyId, $secretAccessKey, $debug, $timeout);
+            $config = new HttpClientConfig($baseUrl, $accessKeyId, $secretAccessKey, $debug, $timeout);
 
             return new CryptoSDK($config);
         });
