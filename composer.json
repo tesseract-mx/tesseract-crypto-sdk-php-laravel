@@ -6,7 +6,7 @@
     "require": {
         "php": ">=7.1.0",
         "illuminate/support": ">=5.0,<5.8",
-        "tesseract/crypto-sdk": "0.2.7"
+        "tesseract/crypto-sdk": "dev-feature/add-url"
     },
     "require-dev": {
         "phpunit/phpunit": "6.*"
